@@ -1,0 +1,30 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+node_modules/
+dist/
+.env
+*.log
+*.db
+coverage/
+.DS_Store
+
+# Local data and model artifacts
+dataset/raw/*
+dataset/processed/*
+ml/models/*
+ml/evaluation/outputs/*
+!dataset/raw/.gitkeep
+!dataset/processed/.gitkeep
+!ml/models/.gitkeep
+!ml/evaluation/outputs/.gitkeep
+
+# Generated Phase 3 datasets and EDA figures are reproducible artifacts
+dataset/generated/*
+ml/notebooks/outputs/*
+!dataset/generated/.gitkeep
+!ml/notebooks/outputs/.gitkeep

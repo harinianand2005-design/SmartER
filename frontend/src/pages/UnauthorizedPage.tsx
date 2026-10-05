@@ -1,0 +1,3 @@
+import { Link } from "react-router-dom";
+
+export default function UnauthorizedPage() { return <section className="page-card access-denied"><p className="eyebrow">Access restricted</p><h1>That view is outside your role.</h1><p className="muted">Your SmartER account does not have permission to open this workspace. Return to your dashboard or contact an administrator.</p><Link className="primary-button inline-button" to="/dashboard">Return to dashboard</Link></section>; }

@@ -1,0 +1,52 @@
+services:
+  database:
+    image: postgres:16-alpine
+    container_name: smarter-database
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-smarter}
+      POSTGRES_USER: ${POSTGRES_USER:-smarter}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-smarter_dev}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-smarter} -d ${POSTGRES_DB:-smarter}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build: ./backend
+    container_name: smarter-backend
+    environment:
+      APP_ENV: ${APP_ENV:-development}
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-smarter}:${POSTGRES_PASSWORD:-smarter_dev}@database:5432/${POSTGRES_DB:-smarter}
+      BACKEND_CORS_ORIGINS: http://localhost:5173
+      ML_MODELS_DIR: /ml/models
+      ML_METADATA_PATH: /ml/models/model_metadata.json
+      ML_EXPLAINABILITY_DIR: /ml/explainability/outputs
+    ports:
+      - "8000:8000"
+    depends_on:
+      database:
+        condition: service_healthy
+    volumes:
+      - ./backend:/app
+      - ./ml/models:/ml/models:ro
+      - ./ml/explainability/outputs:/ml/explainability/outputs:ro
+
+  frontend:
+    build: ./frontend
+    container_name: smarter-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+
+volumes:
+  postgres_data:

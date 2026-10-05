@@ -1,0 +1,1 @@
+"""SmartER backend application package."""

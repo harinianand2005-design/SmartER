@@ -1,0 +1,170 @@
+{
+  "available": true,
+  "interpretation": "Features contributing to the model prediction; not medical causation.",
+  "features": [
+    {
+      "feature": "current_patients",
+      "mean_absolute_shap": 0.6034501454943422
+    },
+    {
+      "feature": "hour",
+      "mean_absolute_shap": 0.11806909882644814
+    },
+    {
+      "feature": "day_of_week",
+      "mean_absolute_shap": 0.06027812410553296
+    },
+    {
+      "feature": "flu_index",
+      "mean_absolute_shap": 0.036362014438311246
+    },
+    {
+      "feature": "available_beds",
+      "mean_absolute_shap": 0.023386618114113824
+    },
+    {
+      "feature": "month",
+      "mean_absolute_shap": 0.019368923721313464
+    },
+    {
+      "feature": "previous_24hr_arrivals",
+      "mean_absolute_shap": 0.01588943885624408
+    },
+    {
+      "feature": "flu_index_change_24hr",
+      "mean_absolute_shap": 0.014452361742258071
+    },
+    {
+      "feature": "nurses_available",
+      "mean_absolute_shap": 0.014263862000306441
+    },
+    {
+      "feature": "temperature",
+      "mean_absolute_shap": 0.013651159086823472
+    },
+    {
+      "feature": "average_waiting_time",
+      "mean_absolute_shap": 0.012431430213848745
+    },
+    {
+      "feature": "doctors_scheduled",
+      "mean_absolute_shap": 0.009709249993562685
+    },
+    {
+      "feature": "previous_3hr_arrivals",
+      "mean_absolute_shap": 0.009017255192001666
+    },
+    {
+      "feature": "rainfall",
+      "mean_absolute_shap": 0.00846635340948899
+    },
+    {
+      "feature": "doctors_available",
+      "mean_absolute_shap": 0.008414970214962958
+    },
+    {
+      "feature": "day_of_month",
+      "mean_absolute_shap": 0.008346201885342595
+    },
+    {
+      "feature": "previous_6hr_arrivals",
+      "mean_absolute_shap": 0.007431662658055624
+    },
+    {
+      "feature": "patient_arrivals",
+      "mean_absolute_shap": 0.006762294581135116
+    },
+    {
+      "feature": "triage_3",
+      "mean_absolute_shap": 0.004975202393134429
+    },
+    {
+      "feature": "triage_5",
+      "mean_absolute_shap": 0.004779300841689117
+    },
+    {
+      "feature": "previous_1hr_arrivals",
+      "mean_absolute_shap": 0.004578974129160243
+    },
+    {
+      "feature": "nurse_availability_percentage",
+      "mean_absolute_shap": 0.0039940074590841925
+    },
+    {
+      "feature": "doctor_availability_percentage",
+      "mean_absolute_shap": 0.0037623339507977262
+    },
+    {
+      "feature": "triage_4",
+      "mean_absolute_shap": 0.002958458264470104
+    },
+    {
+      "feature": "triage_2",
+      "mean_absolute_shap": 0.0024360339554150867
+    },
+    {
+      "feature": "triage_1",
+      "mean_absolute_shap": 0.0023243847187360105
+    },
+    {
+      "feature": "rolling_24hr_average",
+      "mean_absolute_shap": 0.001684433004061376
+    },
+    {
+      "feature": "rolling_6hr_average",
+      "mean_absolute_shap": 0.0013935283829768508
+    },
+    {
+      "feature": "rolling_3hr_average",
+      "mean_absolute_shap": 0.0009753122003873161
+    },
+    {
+      "feature": "is_weekend",
+      "mean_absolute_shap": 0.0008880111171801944
+    },
+    {
+      "feature": "local_event",
+      "mean_absolute_shap": 0.0007263725825150784
+    },
+    {
+      "feature": "weather_category_rain",
+      "mean_absolute_shap": 0.00029477947990098777
+    },
+    {
+      "feature": "event_indicator",
+      "mean_absolute_shap": 0.00012465443015098555
+    },
+    {
+      "feature": "holiday",
+      "mean_absolute_shap": 0.0
+    },
+    {
+      "feature": "nurses_scheduled",
+      "mean_absolute_shap": 0.0
+    },
+    {
+      "feature": "is_holiday",
+      "mean_absolute_shap": 0.0
+    },
+    {
+      "feature": "occupancy_percentage",
+      "mean_absolute_shap": 0.0
+    },
+    {
+      "feature": "bed_availability_percentage",
+      "mean_absolute_shap": 0.0
+    },
+    {
+      "feature": "rainy_flag",
+      "mean_absolute_shap": 0.0
+    },
+    {
+      "feature": "weather_category_clear",
+      "mean_absolute_shap": 0.0
+    },
+    {
+      "feature": "weather_category_storm",
+      "mean_absolute_shap": 0.0
+    }
+  ]
+}
