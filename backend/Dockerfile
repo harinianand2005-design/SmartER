@@ -7,9 +7,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY backend/app ./app
 COPY backend/tests ./tests
-COPY backend/seed.py ./seed.py
 COPY ml ./ml
 
 EXPOSE 8000
 
-CMD ["sh", "-c", "python seed.py && uvicorn app.main:app --host 0.0.0.0 --port 8000"]
+CMD ["sh", "-c", "python -m app.db.seed && uvicorn app.main:app --host 0.0.0.0 --port 8000"]
